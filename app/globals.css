@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Basis-Styles: Fokus für Barrierefreiheit, Lesbarkeit */
+@layer base {
+  :root {
+    --color-brand: 185 28 28; /* brand-red */
+    --color-brand-dark: 153 27 27;
+    --color-stone: 28 25 23;
+    --color-stone-light: 250 250 249;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-stone-50 text-stone-900 antialiased;
+  }
+
+  /* Deutlicher Fokus-Ring für Tastatur und Screenreader */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-red;
+  }
+
+  /* Überschriften-Hierarchie beibehalten (nur visuell anpassen) */
+  h1, h2, h3, h4 {
+    @apply font-semibold tracking-tight text-stone-900;
+  }
+}
+
+/* Utility: Container mit max-width und Padding */
+@layer components {
+  .container-narrow {
+    @apply mx-auto max-w-4xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-wide {
+    @apply mx-auto max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+}
