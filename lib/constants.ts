@@ -18,9 +18,9 @@ export const SITE = {
 
 export const NAV_LINKS = [
   { href: "/", label: "Start" },
-  { href: "/ueber-uns", label: "Über uns" },
   { href: "/leistungen", label: "Leistungen" },
   { href: "/brandschutz-koeln", label: "Brandschutz in Köln" },
+  { href: "/ueber-uns", label: "Über uns" },
   { href: "/kontakt", label: "Kontakt" },
 ] as const;
 
