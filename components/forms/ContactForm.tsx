@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 
-/** Formspree: feste Form-URL für Brandschutzköln (https://formspree.io/f/xeeregjo) */
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/xeeregjo";
+/** Formspree: Form „BrandschutzKoeln.com“ (https://formspree.io/f/mnjgpqoq) */
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mnjgpqoq";
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
