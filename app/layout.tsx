@@ -26,7 +26,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://brandschutzköln.com"),
   applicationName: SITE.name,
   icons: {
-    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    icon: [
+      { url: "/icon.svg?v=2", type: "image/svg+xml" },
+      { url: "/icon.svg?v=2", type: "image/svg+xml", sizes: "any" },
+    ],
+    apple: [{ url: "/icon.svg?v=2", type: "image/svg+xml" }],
   },
   keywords: [
     "Brandschutz Köln",
