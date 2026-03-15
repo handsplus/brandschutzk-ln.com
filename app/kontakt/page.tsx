@@ -2,10 +2,11 @@ import { Metadata } from "next";
 import { createPageMetadata } from "@/lib/seo";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ContactForm } from "@/components/forms/ContactForm";
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { CONTACT } from "@/lib/constants";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Kontakt – Brandschutzberatung anfragen | H&S+ Köln",
+  title: "Kontakt",
   description:
     "Unverbindliche Brandschutzberatung anfragen. Kontaktformular und Ansprechpartner für Brandschutz in Köln – H&S+.",
   path: "/kontakt",
@@ -14,6 +15,7 @@ export const metadata: Metadata = createPageMetadata({
 export default function KontaktPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Start", path: "/" }, { name: "Kontakt", path: "/kontakt" }]} />
       <section className="border-b border-stone-200 bg-white py-16 sm:py-20">
         <div className="container-narrow">
           <h1 className="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">

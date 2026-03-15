@@ -15,15 +15,19 @@ const geistSans = Geist({
 });
 
 const defaultMetadata = createPageMetadata({
-  title: "Brandschutz Köln – Sicherheit beginnt mit Expertise | H&S+",
+  title: "Brandschutz Köln – Sicherheit beginnt mit Expertise",
   description:
-    "Professioneller Brandschutz für Unternehmen, Immobilien und Projekte in Köln. Brandschutzkonzepte, Brandschutzordnungen, Feuerwehrpläne und Brandschutzhelfer-Ausbildung – von Ihrem Spezialisten in Köln.",
+    "Professioneller Brandschutz in Köln: Brandschutzkonzepte, Brandschutzordnungen, Feuerwehrpläne, Brandschutzhelfer-Ausbildung. Ihr Spezialist – H&S+.",
   path: "/",
 });
 
 export const metadata: Metadata = {
   ...defaultMetadata,
   metadataBase: new URL("https://brandschutzköln.com"),
+  title: {
+    default: defaultMetadata.title as string,
+    template: "%s | Brandschutz Köln | H&S+",
+  },
   applicationName: SITE.name,
   icons: {
     icon: [
@@ -46,8 +50,9 @@ export const metadata: Metadata = {
   formatDetection: { telephone: false, email: false },
   twitter: {
     card: "summary_large_image",
-    title: "Brandschutz Köln – Sicherheit beginnt mit Expertise | H&S+",
-    description: "Professioneller Brandschutz für Unternehmen, Immobilien und Projekte in Köln.",
+    title: defaultMetadata.title as string,
+    description: defaultMetadata.description as string,
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Brandschutz Köln | H&S+" }],
   },
 };
 

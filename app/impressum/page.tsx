@@ -1,10 +1,11 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { createPageMetadata } from "@/lib/seo";
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { SITE, CONTACT, LEGAL } from "@/lib/constants";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Impressum & Datenschutz | H&S+ Brandschutz Köln",
+  title: "Impressum & Datenschutz",
   description:
     "Impressum und Datenschutzhinweise – Health and Safety +, Brandschutz Köln. Angaben gemäß § 5 TMG.",
   path: "/impressum",
@@ -13,6 +14,7 @@ export const metadata: Metadata = createPageMetadata({
 export default function ImpressumPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Start", path: "/" }, { name: "Impressum & Datenschutz", path: "/impressum" }]} />
       <section className="border-b border-stone-200 bg-white py-16 sm:py-20">
         <div className="container-narrow">
           <h1 className="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">

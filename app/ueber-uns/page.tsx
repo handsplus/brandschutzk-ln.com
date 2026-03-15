@@ -2,18 +2,20 @@ import { Metadata } from "next";
 import { createPageMetadata } from "@/lib/seo";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { CTA } from "@/components/ui/CTA";
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { SITE } from "@/lib/constants";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Über uns – Brandschutz Köln | Health and Safety +",
+  title: "Über uns",
   description:
-    "Health and Safety + (H&S+) ist Ihr Spezialist für Brandschutz in Köln. Mission, Werte und Verantwortung – erfahren Sie, warum wir die richtige Wahl für Ihren Brandschutz sind.",
+    "H&S+ ist Ihr Spezialist für Brandschutz in Köln. Mission, Werte und Verantwortung – warum wir die richtige Wahl für Ihren Brandschutz sind.",
   path: "/ueber-uns",
 });
 
 export default function UeberUnsPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Start", path: "/" }, { name: "Über uns", path: "/ueber-uns" }]} />
       <section className="border-b border-stone-200 bg-white py-16 sm:py-20">
         <div className="container-narrow">
           <h1 className="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">
@@ -94,14 +96,13 @@ export default function UeberUnsPage() {
           />
           <div className="prose prose-stone max-w-none text-stone-600">
             <p>
-              In Köln und Umgebung gibt es viele Anbieter für Sicherheitsthemen. Wir
-              unterscheiden uns durch unseren klaren Fokus auf Brandschutz: Keine
-              Mischung aus Arbeitssicherheit, Umweltschutz und Brandschutz in einem
-              Guss, sondern tiefe Expertise genau in dem Bereich, den Sie brauchen. Dazu
-              kommt die regionale Verankerung – wir kennen die Anforderungen der
+              In Köln und Umgebung setzen wir als Brandschutzsachverständige auf tiefe
+              Expertise und regionale Verankerung. Wir kennen die Anforderungen der
               Bauaufsicht und der Feuerwehr in der Region und unterstützen Sie bei der
-              Umsetzung vor Ort. Wenn Sie einen Partner suchen, der Brandschutz
-              verständlich, rechtssicher und praxisnah umsetzt, sind Sie bei uns richtig.
+              Umsetzung vor Ort – ob bei Konzepten, Brandschutzordnungen, Feuerwehrplänen
+              oder der Ausbildung von Brandschutzhelfern. Wenn Sie einen Partner suchen,
+              der Brandschutz verständlich, rechtssicher und praxisnah umsetzt, sind Sie
+              bei uns richtig.
             </p>
           </div>
         </div>

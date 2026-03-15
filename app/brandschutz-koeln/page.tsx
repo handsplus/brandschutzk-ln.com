@@ -2,9 +2,10 @@ import { Metadata } from "next";
 import { createPageMetadata } from "@/lib/seo";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { CTA } from "@/components/ui/CTA";
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Brandschutz in Köln – Regionale Besonderheiten | H&S+",
+  title: "Brandschutz in Köln – Regionale Besonderheiten",
   description:
     "Brandschutz in Köln: Behördenanforderungen, typische Risiken in Gewerbe, Industrie, Hotels und Büros. Ihr Überblick für die Region Köln.",
   path: "/brandschutz-koeln",
@@ -13,6 +14,7 @@ export const metadata: Metadata = createPageMetadata({
 export default function BrandschutzKoelnPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Start", path: "/" }, { name: "Brandschutz in Köln", path: "/brandschutz-koeln" }]} />
       <section className="border-b border-stone-200 bg-white py-16 sm:py-20">
         <div className="container-narrow">
           <h1 className="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">

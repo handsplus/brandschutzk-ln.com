@@ -1,19 +1,22 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { createPageMetadata } from "@/lib/seo";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { CTA } from "@/components/ui/CTA";
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { LEISTUNGEN } from "@/content/leistungen";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Leistungen – Brandschutz Köln | H&S+",
+  title: "Leistungen",
   description:
-    "Brandschutzkonzepte, Brandschutzordnungen, Feuerwehrpläne, Brandschutzhelfer-Ausbildung und mehr. Alle Leistungen im Überblick – von H&S+ in Köln.",
+    "Brandschutzkonzepte, Brandschutzordnungen, Feuerwehrpläne, Brandschutzhelfer-Ausbildung. Alle Leistungen im Überblick – H&S+ in Köln.",
   path: "/leistungen",
 });
 
 export default function LeistungenPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Start", path: "/" }, { name: "Leistungen", path: "/leistungen" }]} />
       <section className="border-b border-stone-200 bg-white py-16 sm:py-20">
         <div className="container-narrow">
           <h1 className="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">
@@ -21,7 +24,10 @@ export default function LeistungenPage() {
           </h1>
           <p className="mt-4 text-lg text-stone-600">
             Unser Leistungsspektrum im Brandschutz – von der Konzepterstellung bis zur
-            Schulung und Begleitung vor Ort.
+            Schulung und Begleitung vor Ort. Mehr zu den Anforderungen in der Region finden Sie unter{" "}
+            <Link href="/brandschutz-koeln" className="text-brand-red font-medium hover:underline focus-visible:rounded focus-visible:outline focus-visible:ring-2 focus-visible:ring-brand-red">
+              Brandschutz in Köln
+            </Link>.
           </p>
         </div>
       </section>

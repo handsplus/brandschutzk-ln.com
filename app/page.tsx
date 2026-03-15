@@ -1,9 +1,13 @@
+import Link from "next/link";
 import { Hero } from "@/components/ui/Hero";
 import { LeistungsTeaser } from "@/components/ui/LeistungsTeaser";
 import { CTA } from "@/components/ui/CTA";
 import { ReviewsSection } from "@/components/sections/ReviewsSection";
 import { getLeistungenTeaser } from "@/content/leistungen";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
+import { FaqSection } from "@/components/sections/FaqSection";
+import { FaqJsonLd } from "@/components/seo/FaqJsonLd";
 import { SITE } from "@/lib/constants";
 
 export default function HomePage() {
@@ -11,6 +15,8 @@ export default function HomePage() {
 
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Start", path: "/" }]} />
+      <FaqJsonLd />
       <Hero
         variant="dark"
         badges={[SITE.heroBadge1, SITE.heroBadge2]}
@@ -42,7 +48,10 @@ export default function HomePage() {
               Ein professioneller Brandschutzpartner unterstützt Sie dabei, alle Anforderungen
               zu erfüllen – ohne böse Überraschungen bei Begehungen, Versicherungen oder im
               Ernstfall. In Köln und Umgebung setzen wir genau dort an: mit Expertise,
-              regionaler Kenntnis und dem Fokus auf Ihre Sicherheit.
+              regionaler Kenntnis und dem Fokus auf Ihre Sicherheit. Informieren Sie sich über
+              unsere <Link href="/leistungen" className="text-brand-red font-medium hover:underline focus-visible:rounded focus-visible:outline focus-visible:ring-2 focus-visible:ring-brand-red">Leistungen</Link>, über{" "}
+              <Link href="/brandschutz-koeln" className="text-brand-red font-medium hover:underline focus-visible:rounded focus-visible:outline focus-visible:ring-2 focus-visible:ring-brand-red">Brandschutz in Köln</Link> oder
+              {" "}<Link href="/kontakt" className="text-brand-red font-medium hover:underline focus-visible:rounded focus-visible:outline focus-visible:ring-2 focus-visible:ring-brand-red">fordern Sie eine Beratung an</Link>.
             </p>
           </div>
         </div>
@@ -92,6 +101,8 @@ export default function HomePage() {
 
       {/* Google-Bewertungen: 5 Sterne, Beispiel, Link zu weiteren Bewertungen */}
       <ReviewsSection />
+
+      <FaqSection />
 
       <CTA
         title="Jetzt kostenlose Erstberatung sichern"

@@ -9,6 +9,7 @@ export function JsonLd() {
   const organization = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${siteUrl}/#organization`,
     name: SITE.name,
     alternateName: SITE.shortName,
     url: siteUrl,
@@ -23,9 +24,20 @@ export function JsonLd() {
     sameAs: [SITE.groupWebsite],
   };
 
+  const webSite = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: `${SITE.tagline} | ${SITE.name}`,
+    url: siteUrl,
+    description: `Professioneller Brandschutz für Unternehmen, Immobilien und Projekte in ${SITE.region}.`,
+    publisher: { "@id": `${siteUrl}/#organization` },
+    inLanguage: "de-DE",
+  };
+
   const localBusiness = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
+    "@id": `${siteUrl}/#organization`,
     name: `${SITE.name} – Brandschutz Köln`,
     description: "Brandschutzberatung, Brandschutzkonzepte, Brandschutzordnungen, Feuerwehrpläne und Brandschutzhelfer-Ausbildung in Köln.",
     url: siteUrl,
@@ -50,6 +62,10 @@ export function JsonLd() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSite) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }}
