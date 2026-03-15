@@ -22,7 +22,7 @@ export default function HomePage() {
         badges={[SITE.heroBadge1, SITE.heroBadge2]}
         title="Brandschutz Köln für Ihr Unternehmen und Bauvorhaben"
         titleHighlight="für Ihr Unternehmen und Bauvorhaben"
-        description="Professionelle Brandschutz-Leistungen gemäß BauO NRW, ArbSchG und ASR A2.2 in Köln und Umgebung. Wir sorgen für Sicherheit, Rechtskonformität und einen reibungslosen Betrieb."
+        description="Brandschutz beginnt mit Expertise: Professionelle Leistungen gemäß BauO NRW, ArbSchG und ASR A2.2 in Köln und Umgebung. Wir sorgen für Sicherheit, Rechtskonformität und einen reibungslosen Betrieb."
         ctaLabel="Kostenlose Erstberatung"
         ctaHref="/kontakt"
         secondaryCtaLabel="Unsere Leistungen"
@@ -96,6 +96,11 @@ export default function HomePage() {
               </p>
             </li>
           </ul>
+          <p className="mt-8 text-center text-sm text-stone-600">
+            <Link href="/ueber-uns" className="text-brand-red font-medium hover:underline focus-visible:rounded focus-visible:outline focus-visible:ring-2 focus-visible:ring-brand-red">
+              Mehr über uns erfahren
+            </Link>
+          </p>
         </div>
       </section>
 

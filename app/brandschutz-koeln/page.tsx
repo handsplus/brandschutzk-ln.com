@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { createPageMetadata } from "@/lib/seo";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { CTA } from "@/components/ui/CTA";
@@ -7,7 +8,7 @@ import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 export const metadata: Metadata = createPageMetadata({
   title: "Brandschutz in Köln – Regionale Besonderheiten",
   description:
-    "Brandschutz in Köln: Behördenanforderungen, typische Risiken in Gewerbe, Industrie, Hotels und Büros. Ihr Überblick für die Region Köln.",
+    "Brandschutz in Köln: Behördenanforderungen, Risiken nach Branchen, BauO NRW. Regionale Expertise für Gewerbe, Hotels, Büros – H&S+.",
   path: "/brandschutz-koeln",
 });
 
@@ -43,7 +44,15 @@ export default function BrandschutzKoelnPage() {
               Feuerversicherer. Die Bauaufsicht und die Feuerwehr in Köln arbeiten auf
               Grundlage der BauO NRW und der örtlichen Gegebenheiten. Ein regional
               verankerter Brandschutzpartner kennt diese Rahmenbedingungen und kann Sie
-              zielgerichtet beraten.
+              zielgerichtet beraten. Unsere{" "}
+              <Link href="/leistungen" className="text-brand-red font-medium hover:underline focus-visible:rounded focus-visible:outline focus-visible:ring-2 focus-visible:ring-brand-red">
+                Leistungen
+              </Link>{" "}
+              und eine{" "}
+              <Link href="/kontakt" className="text-brand-red font-medium hover:underline focus-visible:rounded focus-visible:outline focus-visible:ring-2 focus-visible:ring-brand-red">
+                unverbindliche Beratung
+              </Link>{" "}
+              unterstützen Sie dabei.
             </p>
           </div>
         </div>

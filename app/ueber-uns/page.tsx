@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { createPageMetadata } from "@/lib/seo";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { CTA } from "@/components/ui/CTA";
@@ -8,7 +9,7 @@ import { SITE } from "@/lib/constants";
 export const metadata: Metadata = createPageMetadata({
   title: "Über uns",
   description:
-    "H&S+ ist Ihr Spezialist für Brandschutz in Köln. Mission, Werte und Verantwortung – warum wir die richtige Wahl für Ihren Brandschutz sind.",
+    "H&S+ – Ihr Brandschutzsachverständiger in Köln. Mission, Werte, regionale Expertise. Warum wir die richtige Wahl für Ihren Brandschutz sind.",
   path: "/ueber-uns",
 });
 
@@ -99,8 +100,11 @@ export default function UeberUnsPage() {
               In Köln und Umgebung setzen wir als Brandschutzsachverständige auf tiefe
               Expertise und regionale Verankerung. Wir kennen die Anforderungen der
               Bauaufsicht und der Feuerwehr in der Region und unterstützen Sie bei der
-              Umsetzung vor Ort – ob bei Konzepten, Brandschutzordnungen, Feuerwehrplänen
-              oder der Ausbildung von Brandschutzhelfern. Wenn Sie einen Partner suchen,
+              Umsetzung vor Ort – ob bei{" "}
+              <Link href="/leistungen" className="text-brand-red font-medium hover:underline focus-visible:rounded focus-visible:outline focus-visible:ring-2 focus-visible:ring-brand-red">
+                Konzepten, Brandschutzordnungen, Feuerwehrplänen oder Brandschutzhelfer-Ausbildung
+              </Link>
+              . Wenn Sie einen Partner suchen,
               der Brandschutz verständlich, rechtssicher und praxisnah umsetzt, sind Sie
               bei uns richtig.
             </p>

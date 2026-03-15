@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Brandschutz Köln – Sicherheit beginnt mit Expertise | H&S+";
+export const alt = "Brandschutz Köln – Brandschutz beginnt mit Expertise | H&S+";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -39,7 +39,7 @@ export default async function Image() {
             textAlign: "center",
           }}
         >
-          Sicherheit beginnt mit Expertise
+          Brandschutz beginnt mit Expertise
         </div>
         <div
           style={{

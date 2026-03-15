@@ -15,9 +15,9 @@ const geistSans = Geist({
 });
 
 const defaultMetadata = createPageMetadata({
-  title: "Brandschutz Köln – Sicherheit beginnt mit Expertise",
+  title: "Brandschutz Köln – Brandschutz beginnt mit Expertise",
   description:
-    "Professioneller Brandschutz in Köln: Brandschutzkonzepte, Brandschutzordnungen, Feuerwehrpläne, Brandschutzhelfer-Ausbildung. Ihr Spezialist – H&S+.",
+    "Brandschutz beginnt mit Expertise: Konzepte, Brandschutzordnungen, Feuerwehrpläne, Brandschutzhelfer-Ausbildung in Köln. Ihr Spezialist – H&S+.",
   path: "/",
 });
 

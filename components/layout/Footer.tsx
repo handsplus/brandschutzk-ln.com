@@ -52,7 +52,7 @@ export function Footer() {
             </p>
             <div className="mt-8">
               <h3 className={sectionHeading}>Websites</h3>
-              <ul className="mt-5 flex flex-col gap-2 text-xs text-stone-500" role="list">
+              <ul className="mt-2 flex flex-col gap-1 text-xs text-stone-600" role="list">
                 {FOOTER_WEBSITES.map((item) =>
                   item.external ? (
                     <li key={item.label}>
@@ -60,14 +60,14 @@ export function Footer() {
                         href={item.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`text-stone-500 hover:text-stone-400 ${linkBase}`}
+                        className={`text-stone-600 hover:text-stone-500 ${linkBase}`}
                       >
                         {item.label}
                       </a>
                     </li>
                   ) : (
                     <li key={item.label}>
-                      <Link href={item.href} className={`text-stone-500 hover:text-stone-400 ${linkBase}`}>
+                      <Link href={item.href} className={`text-stone-600 hover:text-stone-500 ${linkBase}`}>
                         {item.label}
                       </Link>
                     </li>

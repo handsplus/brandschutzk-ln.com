@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { createPageMetadata } from "@/lib/seo";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ContactForm } from "@/components/forms/ContactForm";
@@ -8,7 +9,7 @@ import { CONTACT } from "@/lib/constants";
 export const metadata: Metadata = createPageMetadata({
   title: "Kontakt",
   description:
-    "Unverbindliche Brandschutzberatung anfragen. Kontaktformular und Ansprechpartner für Brandschutz in Köln – H&S+.",
+    "Kostenlose Erstberatung Brandschutz Köln. Kontaktformular, Telefon, WhatsApp – unverbindlich anfragen. H&S+ meldet sich zeitnah.",
   path: "/kontakt",
 });
 
@@ -23,6 +24,14 @@ export default function KontaktPage() {
           </h1>
           <p className="mt-4 text-lg text-stone-600">
             Kostenlose und unverbindliche Erstberatung – wir melden uns zeitnah bei Ihnen.
+            Noch nicht vertraut mit uns?{" "}
+            <Link href="/ueber-uns" className="text-brand-red font-medium hover:underline focus-visible:rounded focus-visible:outline focus-visible:ring-2 focus-visible:ring-brand-red">
+              Über uns
+            </Link>
+            {" "}und unsere{" "}
+            <Link href="/leistungen" className="text-brand-red font-medium hover:underline focus-visible:rounded focus-visible:outline focus-visible:ring-2 focus-visible:ring-brand-red">
+              Leistungen
+            </Link>.
           </p>
         </div>
       </section>

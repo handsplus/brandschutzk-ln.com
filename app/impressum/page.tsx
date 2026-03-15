@@ -7,7 +7,7 @@ import { SITE, CONTACT, LEGAL } from "@/lib/constants";
 export const metadata: Metadata = createPageMetadata({
   title: "Impressum & Datenschutz",
   description:
-    "Impressum und Datenschutzhinweise – Health and Safety +, Brandschutz Köln. Angaben gemäß § 5 TMG.",
+    "Impressum und Datenschutz – H&S+ Brandschutz Köln. Angaben gemäß § 5 TMG. Verantwortlich: Health and Safety +.",
   path: "/impressum",
 });
 
@@ -52,6 +52,16 @@ export default function ImpressumPage() {
             <a href={`mailto:${CONTACT.email}`} className="text-brand-red hover:underline">
               {CONTACT.email}
             </a>
+          </p>
+          <p className="mt-4 text-stone-600">
+            Für eine unverbindliche Beratung:{" "}
+            <Link href="/kontakt" className="text-brand-red font-medium hover:underline focus-visible:rounded focus-visible:outline focus-visible:ring-2 focus-visible:ring-brand-red">
+              Kontaktformular
+            </Link>
+            {" "}·{" "}
+            <Link href="/" className="text-brand-red font-medium hover:underline focus-visible:rounded focus-visible:outline focus-visible:ring-2 focus-visible:ring-brand-red">
+              Startseite
+            </Link>
           </p>
         </div>
       </section>

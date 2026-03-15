@@ -9,7 +9,7 @@ import { LEISTUNGEN } from "@/content/leistungen";
 export const metadata: Metadata = createPageMetadata({
   title: "Leistungen",
   description:
-    "Brandschutzkonzepte, Brandschutzordnungen, Feuerwehrpläne, Brandschutzhelfer-Ausbildung. Alle Leistungen im Überblick – H&S+ in Köln.",
+    "Brandschutzkonzepte, Brandschutzordnungen, Feuerwehrpläne, Flucht- und Rettungspläne, Brandschutzhelfer-Ausbildung. Alle Leistungen – H&S+ Köln.",
   path: "/leistungen",
 });
 
@@ -86,6 +86,16 @@ export default function LeistungenPage() {
         </div>
       </section>
 
+      <p className="container-wide px-4 sm:px-6 lg:px-8 mx-auto text-center text-stone-600 text-sm mb-8">
+        Sie möchten mehr über uns erfahren?{" "}
+        <Link href="/ueber-uns" className="text-brand-red font-medium hover:underline focus-visible:rounded focus-visible:outline focus-visible:ring-2 focus-visible:ring-brand-red">
+          Über uns
+        </Link>
+        {" "}·{" "}
+        <Link href="/brandschutz-koeln" className="text-brand-red font-medium hover:underline focus-visible:rounded focus-visible:outline focus-visible:ring-2 focus-visible:ring-brand-red">
+          Brandschutz in Köln
+        </Link>
+      </p>
       <CTA
         title="Passende Leistung für Ihr Anliegen?"
         description="Wir beraten Sie gern unverbindlich – ob Konzept, Ordnung, Plan oder Schulung."

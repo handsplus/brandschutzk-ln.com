@@ -3,7 +3,7 @@
 export const SITE = {
   name: "Health and Safety +",
   shortName: "H&S+",
-  tagline: "Brandschutz Köln – Sicherheit beginnt mit Expertise.",
+  tagline: "Brandschutz Köln – Brandschutz beginnt mit Expertise.",
   domain: "brandschutzköln.com",
   region: "Köln und Umgebung",
   /** Zwei kleine Badges im Hero (mit Symbol, (VdS) bei beiden) */
